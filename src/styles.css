@@ -220,3 +220,285 @@ input {
     padding: 24px;
   }
 }
+
+/* ===== 合并台新增样式 ===== */
+
+.hint {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 8px 0 0;
+}
+
+.chip-active {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-color: var(--primary) !important;
+}
+
+.baseline-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.baseline-row input,
+.baseline-row select {
+  flex: 1;
+  min-height: 42px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  padding: 0 12px;
+  font: inherit;
+}
+
+/* 工位 */
+.stations {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.station {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 86px;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  background: #fbfdff;
+}
+
+.station-busy {
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--primary) 40%, var(--border));
+  background: color-mix(in srgb, var(--primary) 6%, #ffffff);
+}
+
+.station-name {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.station-body {
+  display: grid;
+  gap: 2px;
+}
+
+.station-body b {
+  color: var(--primary);
+}
+
+.station-body span {
+  font-size: 13px;
+  color: #526071;
+}
+
+.station-empty {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.queue-title {
+  margin: 16px 0 8px;
+  font-size: 14px;
+}
+
+.queue {
+  display: grid;
+  gap: 8px;
+}
+
+.queue-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: #fff;
+}
+
+.queue-item b {
+  color: var(--accent);
+}
+
+.queue-item span {
+  font-size: 13px;
+  color: #526071;
+}
+
+/* 徽章 */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--border);
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.badge-ok {
+  background: color-mix(in srgb, var(--secondary) 16%, #ffffff);
+  color: #0f766e;
+  border-color: color-mix(in srgb, var(--secondary) 40%, var(--border));
+}
+
+.badge-warn {
+  background: color-mix(in srgb, var(--accent) 14%, #ffffff);
+  color: #c2410c;
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.badge-freeze {
+  background: #e0f2fe;
+  color: #0369a1;
+  border-color: #7dd3fc;
+}
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.row-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 草稿卡片 */
+.draft-card {
+  align-items: start !important;
+}
+
+.draft-card > b {
+  background: linear-gradient(135deg, var(--secondary), var(--primary)) !important;
+}
+
+/* 批次 */
+.batches {
+  display: grid;
+  gap: 12px;
+}
+
+.batch {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  background: #fbfdff;
+}
+
+.batch-done {
+  border-left: 4px solid var(--secondary);
+}
+
+.batch-partial {
+  border-left: 4px solid var(--accent);
+}
+
+.batch-rejected {
+  border-left: 4px solid #dc2626;
+}
+
+.batch-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+}
+
+.batch-head h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.reject-reason {
+  color: #b91c1c;
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+.batch-results {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.batch-result {
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 10px;
+  background: #fff;
+}
+
+.batch-result-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+/* 冲突两版 */
+.conflicts {
+  display: grid;
+  gap: 8px;
+}
+
+.conflict-label {
+  font-size: 13px;
+  color: #b45309;
+  font-weight: 600;
+}
+
+.conflict-versions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.version {
+  display: grid;
+  gap: 2px;
+  padding: 8px 10px;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: #fff;
+}
+
+.version small {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.version b {
+  color: #172033;
+  font-size: 15px;
+}
+
+.version-chosen {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 8%, #ffffff);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+@media (max-width: 860px) {
+  .stations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .conflict-versions {
+    grid-template-columns: 1fr;
+  }
+}
